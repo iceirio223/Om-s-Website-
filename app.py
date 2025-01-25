@@ -71,8 +71,8 @@ with st.container():
         st.subheader("Fully functional snake game")
         st.write(
             """
-             A Python-based scientific calculator featuring a sleek and user-friendly Tkinter GUI.
-            It supports basic arithmetic operations as well as advanced scientific functions like square root, trigonometry, logarithms, and powers.
+             I developed a fully functional Snake game in C++ as a fun and challenging coding project.
+            It features smooth gameplay, dynamic movement, and a scoring system, all built using fundamental programming concepts.
             """
         )
         st.markdown("[Code on Github](https://github.com/iceirio223)")
@@ -85,8 +85,8 @@ with st.container():
         st.subheader("Scientific Calculator with GUI purely built on Python")
         st.write(
             """
-           I developed a fully functional Snake game in C++ as a fun and challenging coding project.
-            It features smooth gameplay, dynamic movement, and a scoring system, all built using fundamental programming concepts.
+            A Python-based scientific calculator featuring a sleek and user-friendly Tkinter GUI.
+            It supports basic arithmetic operations as well as advanced scientific functions like square root, trigonometry, logarithms, and powers.
             """
         )
         st.markdown("[Code on Github](https://github.com/iceirio223)")
