@@ -17,9 +17,9 @@ def load_lottieurl(url):
         return None
 
 # Load local assets
-img_calculator = Image.open("C:\\Users\\Om Prakash Patel\\Desktop\\Python projects\\Images\\calculator.png")
-img_2d_snake = Image.open("C:\\Users\\Om Prakash Patel\\Desktop\\Python projects\\Images\\2d snake game .png")
-img_me = Image.open("C:\\Users\\Om Prakash Patel\\Desktop\\Python projects\\Images\\IMG_ME.JPG")
+img_calculator = Image.open("images/calculator.png")
+img_2d_snake = Image.open("images/2d_snake_game.png")
+img_me = Image.open("images/IMG_ME.JPG")
 
 # Enhance and fix orientation for the profile image
 img_me = img_me.transpose(Image.Transpose.ROTATE_270)
