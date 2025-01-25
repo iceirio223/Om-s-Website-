@@ -66,13 +66,13 @@ with st.container():
     # Project 1: Snake Game
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        st.image(img_2d_snake_url)
+        st.image(img_calculator_url)
     with text_column:
         st.subheader("Fully functional snake game")
         st.write(
             """
-            I developed a fully functional Snake game in C++ as a fun and challenging coding project.
-            It features smooth gameplay, dynamic movement, and a scoring system, all built using fundamental programming concepts.
+             A Python-based scientific calculator featuring a sleek and user-friendly Tkinter GUI.
+            It supports basic arithmetic operations as well as advanced scientific functions like square root, trigonometry, logarithms, and powers.
             """
         )
         st.markdown("[Code on Github](https://github.com/iceirio223)")
@@ -80,13 +80,13 @@ with st.container():
     # Project 2: Scientific Calculator
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        st.image(img_calculator_url)
+        st.image(img_2d_snake_url)
     with text_column:
         st.subheader("Scientific Calculator with GUI purely built on Python")
         st.write(
             """
-            A Python-based scientific calculator featuring a sleek and user-friendly Tkinter GUI.
-            It supports basic arithmetic operations as well as advanced scientific functions like square root, trigonometry, logarithms, and powers.
+           I developed a fully functional Snake game in C++ as a fun and challenging coding project.
+            It features smooth gameplay, dynamic movement, and a scoring system, all built using fundamental programming concepts.
             """
         )
         st.markdown("[Code on Github](https://github.com/iceirio223)")
