@@ -1,7 +1,7 @@
-from PIL import Image, ImageEnhance
 import requests
+from PIL import Image
+import io
 import streamlit as st
-from streamlit_lottie import st_lottie
 
 # Set page configuration
 st.set_page_config(page_title="My Webpage", page_icon=":tada:", layout="wide")
@@ -16,20 +16,10 @@ def load_lottieurl(url):
         st.error(f"Failed to load Lottie animation: {e}")
         return None
 
-# Load local assets
-img_calculator = Image.open("images/calculator.png")
-img_2d_snake = Image.open("images/2d_snake_game.png")
-img_me = Image.open("images/IMG_ME.JPG")
-
-# Enhance and fix orientation for the profile image
-img_me = img_me.transpose(Image.Transpose.ROTATE_270)
-enhancer = ImageEnhance.Sharpness(img_me)
-img_me = enhancer.enhance(2.0)
-enhancer = ImageEnhance.Contrast(img_me)
-img_me = enhancer.enhance(1.2)
-
-# Load a Lottie animation
-lottie_coding = load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_w51pcehl.json")
+# URLs for the images
+img_calculator_url = "https://i.imgur.com/rFMKi1d.png"
+img_2d_snake_url = "https://i.imgur.com/e5NnR5v.png"
+img_me_url = "https://i.imgur.com/zZddBuc.jpeg"
 
 # Header Section
 with st.container():
@@ -40,7 +30,7 @@ with st.container():
         st.write("I am passionate about computers and software development.")
         st.write("[Learn More >](https://www.linkedin.com/in/om-prakash-patel-a95746175/)")
     with img_column:
-        st.image(img_me, width=200)
+        st.image(img_me_url)
 
 # About Me Section
 with st.container():
@@ -61,8 +51,11 @@ with st.container():
         )
         st.write("[<Handshake Profile>](https://uc.joinhandshake.com/profiles/xduucf)")
     with right_column:
-        if lottie_coding:
-            st_lottie(lottie_coding, height=300, key="coding")
+        # If you want to load a Lottie animation
+        # lottie_coding = load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_w51pcehl.json")
+        # if lottie_coding:
+        #     st_lottie(lottie_coding, height=300, key="coding")
+        pass
 
 # Projects Section
 with st.container():
@@ -73,7 +66,7 @@ with st.container():
     # Project 1: Snake Game
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        st.image(img_2d_snake)
+        st.image(img_2d_snake_url)
     with text_column:
         st.subheader("Fully functional snake game")
         st.write(
@@ -87,7 +80,7 @@ with st.container():
     # Project 2: Scientific Calculator
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        st.image(img_calculator)
+        st.image(img_calculator_url)
     with text_column:
         st.subheader("Scientific Calculator with GUI purely built on Python")
         st.write(
@@ -98,7 +91,7 @@ with st.container():
         )
         st.markdown("[Code on Github](https://github.com/iceirio223)")
 
-# Contact Section
+# Contact Section with Styling
 with st.container():
     st.write("---")
     st.header("Get In Touch With Me!")
@@ -107,21 +100,31 @@ with st.container():
     contact_form = """
     <form action="https://formsubmit.co/ompat07@gmail.com" method="POST">
         <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email" required>
-        <textarea name="message" placeholder="Your message here" required></textarea>
-        <button type="submit">Send</button>
+        <div style="margin-bottom: 10px;">
+            <input type="text" name="name" placeholder="Your name" required style="width: 100%; padding: 10px; font-size: 16px;">
+        </div>
+        <div style="margin-bottom: 10px;">
+            <input type="email" name="email" placeholder="Your email" required style="width: 100%; padding: 10px; font-size: 16px;">
+        </div>
+        <div style="margin-bottom: 10px;">
+            <textarea name="message" placeholder="Your message here" required style="width: 100%; padding: 10px; font-size: 16px; height: 150px;"></textarea>
+        </div>
+        <button type="submit" style="background-color: #4CAF50; color: white; border: none; padding: 15px 32px; text-align: center; font-size: 16px; cursor: pointer;">
+            Send
+        </button>
     </form>
     """
+    
     left_column, right_column = st.columns(2)
     with left_column:
         st.markdown(contact_form, unsafe_allow_html=True)
     with right_column:
         st.empty()
 
-# Use CSS
-def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+# Use CSS (optional if needed)
+# def local_css(file_name):
+#     with open(file_name) as f:
+#         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-local_css("style/style.css")
+# Apply custom CSS if needed
+# local_css("style/style.css")
