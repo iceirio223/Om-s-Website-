@@ -41,12 +41,12 @@ with st.container():
         st.write("##")
         st.write(
             """
-            Hello! My name is Om Prakash Patel, and I’m 17 years old, born on February 22, 2007. 
-            My fascination with computers began at a young age, inspired by my father, a dedicated computer professional.
-            Watching him work not only sparked my interest in technology but also taught me the value of focus and perseverance.
-            Fueled by this passion, I decided to pursue a degree in Computer Science.
-            I completed my high school education at Credence High School and am currently a Computer Science student at the University of Cincinnati.
+            Hello! My name is Om Prakash Patel, and I’m 17 years old, born on February 22, 2007.
+            My fascination with computers began at a young age, inspired by my father, a dedicated computer professional. 
+            Watching him work not only sparked my interest in technology but also taught me the value of focus and perseverance. 
+            Fueled by this passion, I have completed my high school education at Credence High School and am currently a declared Computer Science major as an undergraduate student at the University of Cincinnati. 
             I take pride in being a skilled programmer and constantly strive to improve my craft.
+            
             """
         )
         st.write("[<Handshake Profile>](https://uc.joinhandshake.com/profiles/xduucf)")
