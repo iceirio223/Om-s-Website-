@@ -16,7 +16,7 @@ def load_lottieurl(url):
         st.error(f"Failed to load Lottie animation: {e}")
         return None
 
-# URLs for the images
+# Assets
 img_calculator_url = "https://i.imgur.com/rFMKi1d.png"
 img_2d_snake_url = "https://i.imgur.com/e5NnR5v.png"
 img_me_url = "https://i.imgur.com/zZddBuc.jpeg"
@@ -51,10 +51,7 @@ with st.container():
         )
         st.write("[<Handshake Profile>](https://uc.joinhandshake.com/profiles/xduucf)")
     with right_column:
-        # If you want to load a Lottie animation
-        # lottie_coding = load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_w51pcehl.json")
-        # if lottie_coding:
-        #     st_lottie(lottie_coding, height=300, key="coding")
+    
         pass
 
 # Projects Section
@@ -121,10 +118,3 @@ with st.container():
     with right_column:
         st.empty()
 
-# Use CSS (optional if needed)
-# def local_css(file_name):
-#     with open(file_name) as f:
-#         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-# Apply custom CSS if needed
-# local_css("style/style.css")
